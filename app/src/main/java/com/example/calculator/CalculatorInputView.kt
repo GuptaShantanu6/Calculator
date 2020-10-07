@@ -21,15 +21,35 @@ class CalculatorInputView(context: Context, attributeSet: AttributeSet?) : Relat
             val textResource : String? = typedArray.getString(R.styleable.CalculatorInputView_item_text)
             val iconResource : Int = typedArray.getResourceId(R.styleable.CalculatorInputView_item_icon,-1)
 
-            if (iconResource!=-1){
-                input_element_text.visibility = View.GONE
-                input_element_image.apply {
-                    visibility = View.VISIBLE
-                    setImageResource(iconResource)
+            when {
+                iconResource!=-1 -> {
+                    input_element_text.visibility = View.GONE
+                    input_element_image.apply {
+                        visibility = View.VISIBLE
+                        setImageResource(iconResource)
+                    }
                 }
 
+                !textResource.isNullOrEmpty() -> {
+                    input_element_image.visibility = View.GONE
+                    input_element_text.apply {
+                        visibility = View.VISIBLE
+                        text = textResource
+                    }
+                }
+
+                else -> {
+                    input_element_text.visibility = View.GONE
+                    input_element_image.visibility = View.GONE
+                }
             }
 
+            typedArray.recycle()
+
         }
+    }
+
+    override fun setOnClickListener(l: OnClickListener?) {
+        input_element_click.setOnClickListener(l)
     }
 }
