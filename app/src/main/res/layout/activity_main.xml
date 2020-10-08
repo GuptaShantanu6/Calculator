@@ -15,9 +15,205 @@
         app:layout_constraintTop_toTopOf="parent"/>
     
     <com.example.calculator.CalculatorInputView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:id="@+id/key_clear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/output_layout"
-        app:item_icon="@drawable/ic_baseline_delete_24"/>
+        app:layout_constraintBottom_toTopOf="@id/key_7"
+        app:item_icon="@drawable/ic_baseline_delete_24"
+        app:layout_constraintEnd_toStartOf="@id/key_divide"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:id="@+id/key_7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_clear"
+        app:layout_constraintBottom_toTopOf="@id/key_4"
+        app:layout_constraintEnd_toStartOf="@id/key_8"
+        app:item_text="7" />
+
+    <com.example.calculator.CalculatorInputView
+        android:id="@+id/key_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_7"
+        app:layout_constraintBottom_toTopOf="@id/key_1"
+        app:layout_constraintEnd_toStartOf="@id/key_5"
+        app:item_text="4" />
+
+    <com.example.calculator.CalculatorInputView
+        android:id="@+id/key_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_4"
+        app:layout_constraintBottom_toTopOf="@id/blankcolor2"
+        app:layout_constraintEnd_toStartOf="@id/key_2"
+        app:item_text="1" />
+
+    <ImageView
+        android:id="@+id/blankcolor2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorTileBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/key_0"
+        tools:ignore="ContentDescription"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_divide"
+        app:item_icon="@drawable/ic_divide_mathematical_sign"
+        app:layout_constraintTop_toBottomOf="@id/output_layout"
+        app:layout_constraintStart_toEndOf="@id/key_clear"
+        app:layout_constraintBottom_toTopOf="@id/key_8"
+        app:layout_constraintEnd_toStartOf="@id/key_multiply"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_8"
+        app:item_text="8"
+        app:layout_constraintTop_toBottomOf="@id/key_divide"
+        app:layout_constraintStart_toEndOf="@id/key_7"
+        app:layout_constraintBottom_toTopOf="@id/key_5"
+        app:layout_constraintEnd_toStartOf="@id/key_9"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_5"
+        app:item_text="5"
+        app:layout_constraintTop_toBottomOf="@id/key_8"
+        app:layout_constraintStart_toEndOf="@id/key_4"
+        app:layout_constraintBottom_toTopOf="@id/key_2"
+        app:layout_constraintEnd_toStartOf="@id/key_6"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_2"
+        app:item_text="2"
+        app:layout_constraintTop_toBottomOf="@id/key_5"
+        app:layout_constraintStart_toEndOf="@id/key_1"
+        app:layout_constraintBottom_toTopOf="@id/key_0"
+        app:layout_constraintEnd_toStartOf="@id/key_3"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_0"
+        app:item_text="0"
+        app:layout_constraintTop_toBottomOf="@id/key_2"
+        app:layout_constraintStart_toEndOf="@id/blankcolor2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/blankcolor"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_multiply"
+        app:item_icon="@drawable/ic_multiply"
+        app:layout_constraintTop_toBottomOf="@id/output_layout"
+        app:layout_constraintStart_toEndOf="@id/key_divide"
+        app:layout_constraintBottom_toTopOf="@id/key_9"
+        app:layout_constraintEnd_toStartOf="@id/key_delete" />
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_9"
+        app:item_text="9"
+        app:layout_constraintTop_toBottomOf="@id/key_multiply"
+        app:layout_constraintStart_toEndOf="@id/key_8"
+        app:layout_constraintBottom_toTopOf="@id/key_6"
+        app:layout_constraintEnd_toStartOf="@id/percent"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_6"
+        app:item_text="6"
+        app:layout_constraintTop_toBottomOf="@id/key_9"
+        app:layout_constraintStart_toEndOf="@id/key_5"
+        app:layout_constraintBottom_toTopOf="@id/key_3"
+        app:layout_constraintEnd_toStartOf="@id/key_minus"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_3"
+        app:item_text="3"
+        app:layout_constraintTop_toBottomOf="@id/key_6"
+        app:layout_constraintStart_toEndOf="@id/key_2"
+        app:layout_constraintBottom_toTopOf="@id/blankcolor"
+        app:layout_constraintEnd_toStartOf="@id/key_plus"/>
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorTileBackground"
+        app:layout_constraintTop_toBottomOf="@id/key_3"
+        app:layout_constraintStart_toEndOf="@id/key_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/blankcolor"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toStartOf="@id/key_equal"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_delete"
+        app:item_icon="@drawable/ic_delete"
+        app:layout_constraintTop_toBottomOf="@id/output_layout"
+        app:layout_constraintStart_toEndOf="@id/key_multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/percent"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/percent"
+        app:item_icon="@drawable/ic_percentage"
+        app:layout_constraintTop_toBottomOf="@id/key_delete"
+        app:layout_constraintStart_toEndOf="@id/key_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/key_minus"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_minus"
+        app:item_icon="@drawable/ic_minus_sign"
+        app:layout_constraintTop_toBottomOf="@id/percent"
+        app:layout_constraintStart_toEndOf="@id/key_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/key_plus"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_plus"
+        app:item_icon="@drawable/ic_baseline_add_24"
+        app:layout_constraintTop_toBottomOf="@id/key_minus"
+        app:layout_constraintStart_toEndOf="@id/key_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/key_equal"/>
+
+    <com.example.calculator.CalculatorInputView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/key_equal"
+        app:item_icon="@drawable/ic_equal"
+        app:layout_constraintTop_toBottomOf="@id/key_plus"
+        app:layout_constraintStart_toEndOf="@id/blankcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
