@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/output_layout"
         app:layout_constraintBottom_toTopOf="@id/key_7"
-        app:item_icon="@drawable/ic_baseline_delete_24"
+        app:item_icon="@drawable/ic_new_trash"
         app:layout_constraintEnd_toStartOf="@id/key_divide"/>
 
     <com.example.calculator.CalculatorInputView
