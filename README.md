@@ -1,2 +1,2 @@
 # Calculator
-A simple Interactive Calculator
+A Simple Interactive Calculator
